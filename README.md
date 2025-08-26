@@ -1,4 +1,4 @@
-# green-api-postman-collection-max
+# Green-API - MAX Postman Collection
 
 Коллекция Postman сервиса [Green-API](https://green-api.com/). Коллекция используется для тестирования и отладки запросов к API MAX - отправка и получение сообщений MAX через HTTP-API запросы. Поставляемый файл переменных окружения содержит список переменных для использования в коллекции.
 
