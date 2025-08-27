@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "5a47154a-4405-4603-854a-cf918f759403",
+		"_postman_id": "b31f35f2-f125-4364-8f76-8731ea1d4ec1",
 		"name": "Green API RU Max (v3)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -567,13 +567,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"getSettings",
+										"setSettings",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -621,13 +621,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getSettings/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/setSettings/{{apiTokenInstance}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"getSettings",
+										"setSettings",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -887,7 +887,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+						"description": "Документация [SetProfilePicture](https://green-api.com/v3/docs/api/account/SetProfilePicture/)"
 					},
 					"response": [
 						{
@@ -2127,7 +2127,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://green-api.com/v3/docs/api/sending/SendMessage/)"
+						"description": "Документация [SendFileByUpload](https://green-api.com/v3/docs/api/sending/SendFileByUpload)"
 					},
 					"response": [
 						{
@@ -2447,7 +2447,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://green-api.com/v3/docs/api/sending/SendMessage/)"
+						"description": "Документация [SendFileByUrl](https://green-api.com/v3/docs/api/sending/SendFileByUrl)"
 					},
 					"response": [
 						{
@@ -2505,7 +2505,7 @@
 							"body": "{\n    \"idMessage\": \"2712345112345\"\n}"
 						},
 						{
-							"name": "sendMessage (empty chatId)",
+							"name": "sendFileByUrl (empty chatId)",
 							"originalRequest": {
 								"method": "VIEW",
 								"header": [],
@@ -2559,7 +2559,7 @@
 							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-08-15T07:04:56.987Z\",\n    \"path\": \"/waInstance3100000001/sendFileByUrl/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf\",\n    \"message\": \"Validation failed. Details: 'chatId' is not allowed to be empty\"\n}"
 						},
 						{
-							"name": "sendMessage (empty urlFile)",
+							"name": "sendFileByUrl (empty urlFile)",
 							"originalRequest": {
 								"method": "VIEW",
 								"header": [],
@@ -2573,13 +2573,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendMessage/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"sendMessage",
+										"sendFileByUrl",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -2613,7 +2613,7 @@
 							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-08-15T07:04:56.987Z\",\n    \"path\": \"/waInstance3100000001/sendFileByUrl/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf\",\n    \"message\": \"Validation failed. Details: 'urlFile' is not allowed to be empty\"\n}"
 						},
 						{
-							"name": "sendMessage (empty fileName)",
+							"name": "sendFileByUrl (empty fileName)",
 							"originalRequest": {
 								"method": "VIEW",
 								"header": [
@@ -2780,11 +2780,11 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [SendMessage](https://green-api.com/v3/docs/api/sending/SendMessage/)"
+						"description": "Документация [UploadFile](https://green-api.com/v3/docs/api/sending/UploadFile)"
 					},
 					"response": [
 						{
-							"name": "sendFileByUrl",
+							"name": "uploadFile",
 							"originalRequest": {
 								"method": "VIEW",
 								"header": [],
@@ -2798,13 +2798,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+									"raw": "{{mediaUrl}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
 									"host": [
 										"{{mediaUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"sendFileByUrl",
+										"uploadFile",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -2838,7 +2838,7 @@
 							"body": "{\n    \"urlFile\": \"https://sw-media-out.storage.yandexcloud.net/3100000001/95917013-579d-429f-9145-469865c4a6e8.jpg\"\n}"
 						},
 						{
-							"name": "sendFileByUrl (file should not be empty)",
+							"name": "uploadFile (file should not be empty)",
 							"originalRequest": {
 								"method": "VIEW",
 								"header": [
@@ -2858,13 +2858,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{mediaUrl}}/waInstance{{idInstance}}/sendFileByUrl/{{apiTokenInstance}}",
+									"raw": "{{mediaUrl}}/waInstance{{idInstance}}/uploadFile/{{apiTokenInstance}}",
 									"host": [
 										"{{mediaUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"sendFileByUrl",
+										"uploadFile",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -3017,7 +3017,7 @@
 										"method": "VIEW",
 										"header": [],
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/receiveNorification/{{apiTokenInstance}}?receiveTimeout=5",
+											"raw": "{{apiUrl}}/v3/waInstance{{idInstance}}/receiveNorification/{{apiTokenInstance}}?receiveTimeout=5",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -3077,7 +3077,7 @@
 										"method": "VIEW",
 										"header": [],
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteNorification/{{apiTokenInstance}}/{{receiptId}}",
+											"raw": "{{apiUrl}}/v3/waInstance{{idInstance}}/deleteNorification/{{apiTokenInstance}}/{{receiptId}}",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -3136,7 +3136,7 @@
 										"{{apiTokenInstance}}"
 									]
 								},
-								"description": "Документация [ReceiveNotification](https://green-api.com/v3/docs/api/receiving/technology-http-api/ReceiveNotification/)"
+								"description": "Документация [DownloadFile](https://green-api.com/v3/docs/api/receiving/files/DownloadFile/)"
 							},
 							"response": [
 								{
@@ -3154,7 +3154,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
+											"raw": "{{apiUrl}}/v3/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -3245,7 +3245,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
+											"raw": "{{apiUrl}}/v3/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -3378,7 +3378,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
+											"raw": "{{apiUrl}}/v3/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
 											"host": [
 												"{{apiUrl}}"
 											],
@@ -3511,7 +3511,7 @@
 											}
 										},
 										"url": {
-											"raw": "{{apiUrl}}/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
+											"raw": "{{apiUrl}}/v3/waInstance{{idInstance}}/downloadFile/{{apiTokenInstance}}",
 											"host": [
 												"{{apiUrl}}"
 											],
