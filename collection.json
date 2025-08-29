@@ -7496,7 +7496,7 @@
 												"{{webhookUrl}}"
 											]
 										},
-										"description": "Документация [Входящее сообщение с видео](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+										"description": "Документация [Входящее сообщение с видео](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/VideoMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
 									},
 									"response": [
 										{
@@ -7547,7 +7547,7 @@
 												"{{webhookUrl}}"
 											]
 										},
-										"description": "Документация [Входящее сообщение с аудио](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+										"description": "Документация [Входящее сообщение с документом](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/DocumentMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)\n\nВ текущей версии MAX не существует отдельного типа для аудио. Сообщения с аудио обрабатываются как документ."
 									},
 									"response": [
 										{
@@ -7598,7 +7598,7 @@
 												"{{webhookUrl}}"
 											]
 										},
-										"description": "Документация [Входящее сообщение с документом](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/ImageMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+										"description": "Документация [Входящее сообщение с документом](https://green-api.com/http://10.128.0.50:4004/v3/docs/api/receiving/notifications-format/incoming-message/DocumentMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
 									},
 									"response": [
 										{
@@ -7650,7 +7650,8 @@
 									"host": [
 										"{{webhookUrl}}"
 									]
-								}
+								},
+								"description": "Документация [Входящее текстовое сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/TextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
 							},
 							"response": []
 						},
@@ -7673,7 +7674,8 @@
 									"host": [
 										"{{webhookUrl}}"
 									]
-								}
+								},
+								"description": "Документация [Входящее текстовое сообщение с URL](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/ExtendedTextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
 							},
 							"response": []
 						}
@@ -7708,7 +7710,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное с телефона сообщение с изображением](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное с телефона сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
 											},
 											"response": [
 												{
@@ -7759,7 +7761,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное с телефона сообщение с видео](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное с телефона сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
 											},
 											"response": [
 												{
@@ -7810,7 +7812,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное с телефона сообщение с аудио](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное с телефона сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\"\n\nВ текущей версии MAX не существует отдельного типа для аудио. Сообщения с аудио обрабатываются как документ."
 											},
 											"response": [
 												{
@@ -7861,7 +7863,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное с телефона сообщение с документом](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное с телефона сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
 											},
 											"response": [
 												{
@@ -7913,7 +7915,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Документация [Отправленное с телефона сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
 									},
 									"response": []
 								},
@@ -7936,7 +7939,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Документация [Отправленное текстовое сообщение с URL](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/ExtendedTextMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
 									},
 									"response": []
 								}
@@ -7968,7 +7972,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное через API сообщение с изображением](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
 											},
 											"response": [
 												{
@@ -8019,7 +8023,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное через API сообщение с видео](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
 											},
 											"response": [
 												{
@@ -8070,7 +8074,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное через API сообщение с аудио](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\"\n\nВ текущей версии MAX не существует отдельного типа для аудио. Сообщения с аудио обрабатываются как документ."
 											},
 											"response": [
 												{
@@ -8121,7 +8125,7 @@
 														"{{webhookUrl}}"
 													]
 												},
-												"description": "Документация [Отправленное через API сообщение с документом](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
+												"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
 											},
 											"response": [
 												{
@@ -8173,7 +8177,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
 									},
 									"response": []
 								},
@@ -8196,7 +8201,8 @@
 											"host": [
 												"{{webhookUrl}}"
 											]
-										}
+										},
+										"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
 									},
 									"response": []
 								}
