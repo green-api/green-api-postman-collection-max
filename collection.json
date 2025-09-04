@@ -11507,7 +11507,7 @@
 							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-09-03T08:54:40.496Z\",\n    \"path\": \"/waInstance3100000001/leaveGroup/9ece01c05bbe44768fb674840138bbe6af876fe49b69418fbf\",\n    \"message\": \"Validation failed. Details: 'chatId' is required\"\n}"
 						},
 						{
-							"name": "updateGroupName ('chatId' must be a string)",
+							"name": "leaveGroup ('chatId' must be a string)",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -13909,7 +13909,7 @@
 					},
 					"response": [
 						{
-							"name": "GetContactInfo",
+							"name": "getContactInfo",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -13923,13 +13923,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/GetContactInfo/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getContactInfo/{{apiTokenInstance}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"GetContactInfo",
+										"getContactInfo",
 										"{{apiTokenInstance}}"
 									]
 								}
@@ -14029,7 +14029,7 @@
 							"body": "{\n    \"avatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\n    \"name\": \"Ходабрыш Пробешёлов\",\n    \"contactName\": \"Ходабрыш Пробешёлов\",\n    \"chatId\": \"100000001\",\n    \"lastSeen\": 1755057686\n}"
 						},
 						{
-							"name": "GetContactInfo (valiadation failed)",
+							"name": "getContactInfo (valiadation failed)",
 							"originalRequest": {
 								"method": "POST",
 								"header": [],
@@ -14043,13 +14043,13 @@
 									}
 								},
 								"url": {
-									"raw": "{{apiUrl}}/waInstance{{idInstance}}/GetContactInfo/{{apiTokenInstance}}",
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/getContactInfo/{{apiTokenInstance}}",
 									"host": [
 										"{{apiUrl}}"
 									],
 									"path": [
 										"waInstance{{idInstance}}",
-										"GetContactInfo",
+										"getContactInfo",
 										"{{apiTokenInstance}}"
 									]
 								}
