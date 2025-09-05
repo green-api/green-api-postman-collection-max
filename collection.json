@@ -15405,7 +15405,7 @@
 										"{{webhookUrl}}"
 									]
 								},
-								"description": "Документация [Входящее сообщение-реакция](https://green-api.com/docs/api/receiving/notifications-format/incoming-message/ReactionMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/)"
+								"description": "Документация [Входящее сообщение-реакция](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/ReactionMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
 							},
 							"response": [
 								{
@@ -15721,7 +15721,7 @@
 												"{{webhookUrl}}"
 											]
 										},
-										"description": "Документация [Отправленное с телефона сообщение-реакция](https://green-api.com/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
+										"description": "Документация [Отправленное с телефона сообщение-реакция](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingMessageWebhook\": \"yes\""
 									},
 									"response": [
 										{
