@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "31cba982-6a38-4e50-ad3f-44811600a0e1",
+		"_postman_id": "090cc0da-77f5-4438-9c50-e6d6233b02b6",
 		"name": "Green API RU Max (v3)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -10994,7 +10994,7 @@
 							},
 							"status": "Bad Request",
 							"code": 400,
-							"_postman_previewlanguage": null,
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -14319,7 +14319,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -14453,7 +14453,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -14587,7 +14587,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -14721,7 +14721,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -14855,7 +14855,7 @@
 							},
 							"status": "OK",
 							"code": 200,
-							"_postman_previewlanguage": "",
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Date",
@@ -15240,7 +15240,7 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"fileMessageData\": {\r\n      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n      \"caption\": \"\",\r\n      \"fileName\": \"sample-6s.mp3\",\r\n      \"jpegThumbnail\": \"\",\r\n      \"isAnimated\": false,\r\n      \"mimeType\": \"audio/mpeg\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
+											"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"audioMessage\",\r\n    \"fileMessageData\": {\r\n      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n      \"caption\": \"\",\r\n      \"fileName\": \"sample-6s.mp3\",\r\n      \"jpegThumbnail\": \"\",\r\n      \"isAnimated\": false,\r\n      \"mimeType\": \"audio/mpeg\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -15263,7 +15263,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"type\": \"incoming\",\r\n  \"idMessage\": \"2755232962562\",\r\n  \"timestamp\": 1588091580,\r\n  \"typeMessage\": \"documentMessage\",\r\n  \"chatId\": \"10000000\",\r\n  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n  \"caption\": \"\",\r\n  \"fileName\": \"sample-6s.mp3\",\r\n  \"jpegThumbnail\": \"\",\r\n  \"mimeType\": \"audio/mpeg\",\r\n  \"isAnimated\": false,\r\n  \"isForwarded\": false,\r\n  \"forwardingScore\": 0,\r\n  \"senderId\": \"10000000\",\r\n  \"senderName\": \"Ходабрыш Пробешёлов\",\r\n  \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n  \"editedMessageId\": \"\",\r\n  \"deletedMessageId\": \"\",\r\n  \"videoNote\": false,\r\n  \"isEdited\": false,\r\n  \"isDeleted\": false\r\n}",
+													"raw": "{\r\n  \"type\": \"incoming\",\r\n  \"idMessage\": \"2755232962562\",\r\n  \"timestamp\": 1588091580,\r\n  \"typeMessage\": \"audioMessage\",\r\n  \"chatId\": \"10000000\",\r\n  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n  \"caption\": \"\",\r\n  \"fileName\": \"sample-6s.mp3\",\r\n  \"jpegThumbnail\": \"\",\r\n  \"mimeType\": \"audio/mpeg\",\r\n  \"isAnimated\": false,\r\n  \"isForwarded\": false,\r\n  \"forwardingScore\": 0,\r\n  \"senderId\": \"10000000\",\r\n  \"senderName\": \"Ходабрыш Пробешёлов\",\r\n  \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n  \"editedMessageId\": \"\",\r\n  \"deletedMessageId\": \"\",\r\n  \"videoNote\": false,\r\n  \"isEdited\": false,\r\n  \"isDeleted\": false\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -15556,7 +15556,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"typeWebhook\": \"outgoingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"fileMessageData\": {\r\n      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n      \"caption\": \"\",\r\n      \"fileName\": \"sample-6s.mp3\",\r\n      \"jpegThumbnail\": \"\",\r\n      \"isAnimated\": false,\r\n      \"mimeType\": \"audio/mpeg\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
+													"raw": "{\r\n  \"typeWebhook\": \"outgoingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"audioMessage\",\r\n    \"fileMessageData\": {\r\n      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n      \"caption\": \"\",\r\n      \"fileName\": \"sample-6s.mp3\",\r\n      \"jpegThumbnail\": \"\",\r\n      \"isAnimated\": false,\r\n      \"mimeType\": \"audio/mpeg\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -15579,7 +15579,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"type\": \"outgoing\",\r\n  \"idMessage\": \"2755232962562\",\r\n  \"timestamp\": 1588091580,\r\n  \"typeMessage\": \"documentMessage\",\r\n  \"chatId\": \"10000000\",\r\n  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n  \"caption\": \"\",\r\n  \"fileName\": \"sample-6s.mp3\",\r\n  \"jpegThumbnail\": \"\",\r\n  \"mimeType\": \"audio/mpeg\",\r\n  \"isAnimated\": false,\r\n  \"isForwarded\": false,\r\n  \"forwardingScore\": 0,\r\n  \"statusMessage\": \"delivered\",\r\n  \"sendByApi\": false,\r\n  \"editedMessageId\": \"\",\r\n  \"deletedMessageId\": \"\",\r\n  \"videoNote\": false,\r\n  \"isEdited\": false,\r\n  \"isDeleted\": false\r\n}",
+															"raw": "{\r\n  \"type\": \"outgoing\",\r\n  \"idMessage\": \"2755232962562\",\r\n  \"timestamp\": 1588091580,\r\n  \"typeMessage\": \"audioMessage\",\r\n  \"chatId\": \"10000000\",\r\n  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n  \"caption\": \"\",\r\n  \"fileName\": \"sample-6s.mp3\",\r\n  \"jpegThumbnail\": \"\",\r\n  \"mimeType\": \"audio/mpeg\",\r\n  \"isAnimated\": false,\r\n  \"isForwarded\": false,\r\n  \"forwardingScore\": 0,\r\n  \"statusMessage\": \"delivered\",\r\n  \"sendByApi\": false,\r\n  \"editedMessageId\": \"\",\r\n  \"deletedMessageId\": \"\",\r\n  \"videoNote\": false,\r\n  \"isEdited\": false,\r\n  \"isDeleted\": false\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
@@ -15869,7 +15869,7 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"documentMessage\",\r\n    \"fileMessageData\": {\r\n      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n      \"caption\": \"\",\r\n      \"fileName\": \"sample-6s.mp3\",\r\n      \"jpegThumbnail\": \"\",\r\n      \"isAnimated\": false,\r\n      \"mimeType\": \"audio/mpeg\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
+													"raw": "{\r\n  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"audioMessage\",\r\n    \"fileMessageData\": {\r\n      \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n      \"caption\": \"\",\r\n      \"fileName\": \"sample-6s.mp3\",\r\n      \"jpegThumbnail\": \"\",\r\n      \"isAnimated\": false,\r\n      \"mimeType\": \"audio/mpeg\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -15892,7 +15892,7 @@
 														"header": [],
 														"body": {
 															"mode": "raw",
-															"raw": "{\r\n  \"type\": \"outgoing\",\r\n  \"idMessage\": \"2755232962562\",\r\n  \"timestamp\": 1588091580,\r\n  \"typeMessage\": \"documentMessage\",\r\n  \"chatId\": \"10000000\",\r\n  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n  \"caption\": \"\",\r\n  \"fileName\": \"sample-6s.mp3\",\r\n  \"jpegThumbnail\": \"\",\r\n  \"mimeType\": \"audio/mpeg\",\r\n  \"isAnimated\": false,\r\n  \"isForwarded\": false,\r\n  \"forwardingScore\": 0,\r\n  \"statusMessage\": \"delivered\",\r\n  \"sendByApi\": true,\r\n  \"editedMessageId\": \"\",\r\n  \"deletedMessageId\": \"\",\r\n  \"videoNote\": false,\r\n  \"isEdited\": false,\r\n  \"isDeleted\": false\r\n}",
+															"raw": "{\r\n  \"type\": \"outgoing\",\r\n  \"idMessage\": \"2755232962562\",\r\n  \"timestamp\": 1588091580,\r\n  \"typeMessage\": \"audioMessage\",\r\n  \"chatId\": \"10000000\",\r\n  \"downloadUrl\": \"https://sw-media-3100.storage.yandexcloud.net/3100000000/f3f4a306-b6a1-4a2a-bb29-a15b06752118.mp3\",\r\n  \"caption\": \"\",\r\n  \"fileName\": \"sample-6s.mp3\",\r\n  \"jpegThumbnail\": \"\",\r\n  \"mimeType\": \"audio/mpeg\",\r\n  \"isAnimated\": false,\r\n  \"isForwarded\": false,\r\n  \"forwardingScore\": 0,\r\n  \"statusMessage\": \"delivered\",\r\n  \"sendByApi\": true,\r\n  \"editedMessageId\": \"\",\r\n  \"deletedMessageId\": \"\",\r\n  \"videoNote\": false,\r\n  \"isEdited\": false,\r\n  \"isDeleted\": false\r\n}",
 															"options": {
 																"raw": {
 																	"language": "json"
