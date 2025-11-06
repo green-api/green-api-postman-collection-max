@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "62f29808-14c4-42aa-af54-ca079ebb3415",
+		"_postman_id": "d2f084e6-71d1-45b9-8164-6cc6d33dd6b8",
 		"name": "Green API RU Max (v3)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -520,7 +520,7 @@
 								}
 							],
 							"cookie": [],
-							"body": "\n{\n    \"wid\": \"79991234567@c.us\",\n    \"typeInstance\": \"v3\",\n    \"webhookUrl\": \"\",\n    \"webhookUrlToken\": \"\",\n    \"delaySendMessagesMilliseconds\": 0,\n    \"markIncomingMessagesReaded\": \"no\",\n    \"markIncomingMessagesReadedOnReply\": \"no\",\n    \"proxyInstance\": \"system proxy\",\n    \"outgoingWebhook\": \"no\",\n    \"outgoingMessageWebhook\": \"no\",\n    \"outgoingAPIMessageWebhook\": \"no\",\n    \"incomingWebhook\": \"no\"\n}\n"
+							"body": "\n{\n    \"wid\": \"79991234567@c.us\",\n    \"typeInstance\": \"v3\",\n    \"webhookUrl\": \"\",\n    \"webhookUrlToken\": \"\",\n    \"delaySendMessagesMilliseconds\": 0,\n    \"markIncomingMessagesReaded\": \"no\",\n    \"markIncomingMessagesReadedOnReply\": \"no\",\n    \"proxyInstance\": \"system proxy\",\n    \"outgoingWebhook\": \"no\",\n    \"outgoingMessageWebhook\": \"no\",\n    \"outgoingAPIMessageWebhook\": \"no\",\n    \"incomingWebhook\": \"no\",\n    \"editedMessageWebhook\": \"no\",\n    \"deletedMessageWebhook\": \"no\"\n}\n"
 						}
 					]
 				},
@@ -531,7 +531,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"webhookUrl\": \"\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 0,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"no\",\r\n    \"outgoingMessageWebhook\": \"no\",\r\n    \"outgoingAPIMessageWebhook\": \"no\",\r\n    \"incomingWebhook\": \"no\"\r\n}",
+							"raw": "{\r\n    \"webhookUrl\": \"\",\r\n    \"webhookUrlToken\": \"\",\r\n    \"delaySendMessagesMilliseconds\": 0,\r\n    \"markIncomingMessagesReaded\": \"no\",\r\n    \"markIncomingMessagesReadedOnReply\": \"no\",\r\n    \"outgoingWebhook\": \"no\",\r\n    \"outgoingMessageWebhook\": \"no\",\r\n    \"outgoingAPIMessageWebhook\": \"no\",\r\n    \"incomingWebhook\": \"no\",\r\n    \"editedMessageWebhook\": \"no\",\r\n    \"deletedMessageWebhook\": \"no\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -3265,6 +3265,410 @@
 							],
 							"cookie": [],
 							"body": "file should not be empty"
+						}
+					]
+				},
+				{
+					"name": "Отправить геолокацию",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"latitude\": 51.1035035,\r\n    \"longitude\": 71.3996933\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendLocation",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendLocation](https://green-api.com/v3/docs/api/sending/SendLocation/)"
+					},
+					"response": [
+						{
+							"name": "sendLocation",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"latitude\": 51.1035035,\r\n    \"longitude\": 71.3996933\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendLocation",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"1762333029830\"\n}"
+						},
+						{
+							"name": "sendLocation (empty field)",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n    \"latitude\": 51.1035035,\r\n    \"longitude\": 71.3996933\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendLocation/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendLocation",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-08-15T07:04:56.987Z\",\n    \"path\": \"/waInstance31000000001/sendLocation/94dfd8c20oeqrgnpweroi19ip4jke47d4b8\",\n    \"message\": \"Validation failed. Details: 'chatId' is not allowed to be empty\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Отправить контакт",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "User-Agent",
+								"value": "GREEN-API_POSTMAN/1.0",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"contact\": {\r\n        \"chatId\": \"10000000\"\r\n    }\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"sendContact",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [SendContact](https://green-api.com/v3/docs/api/sending/SendContact/)"
+					},
+					"response": [
+						{
+							"name": "sendContact",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"contact\": {\r\n        \"chatId\": \"10000001\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"idMessage\": \"1762333029830\"\n}"
+						},
+						{
+							"name": "sendContact (empty field)",
+							"originalRequest": {
+								"method": "VIEW",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n    \"contact\": {\r\n        \"chatId\": \"\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Server",
+									"value": "nginx"
+								},
+								{
+									"key": "Date",
+									"value": "Fri, 17 Apr 2020 13:14:58 GMT"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json"
+								},
+								{
+									"key": "Content-Length",
+									"value": "41"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								}
+							],
+							"cookie": [],
+							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-08-15T07:04:56.987Z\",\n    \"path\": \"/waInstance31000000001/sendContact/94dfd8c20oeqrgnpweroi19ip4jke47d4b8\",\n    \"message\": \"Validation failed. Details: 'chatId' must be one of the next formats: 'phone_number@c.us', 'user_id' (digits only), or 'group_id' (starts with '-' followed by digits)\"\n}"
+						},
+						{
+							"name": "sendContact (not found)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "User-Agent",
+										"value": "GREEN-API_POSTMAN/1.0",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"contact\": {\r\n        \"chatId\": \"20000001\"\r\n    }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/sendContact/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"sendContact",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": null,
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json; charset=utf-8"
+								},
+								{
+									"key": "Content-Length",
+									"value": "28"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1c-JKTbJgfau7eLb8i3UvpYklH/pFU\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 04:15:43 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Contact 20000001 not found\""
 						}
 					]
 				}
@@ -14373,6 +14777,986 @@
 					]
 				},
 				{
+					"name": "Редактировать сообщение",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n\t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r\n    \"idMessage\": \"2712345112345\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"editMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [EditMessage](https://green-api.com/v3/docs/api/service/EditMessage)"
+					},
+					"response": [
+						{
+							"name": "editMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n\t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r\n    \"idMessage\": \"2712345112345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"editMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 05:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"isEdited\": true\n}"
+						},
+						{
+							"name": "editMessage (validation failed)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"message\": \"Я использую GREEN-API для отправки этого сообщения!\",\r\n    \"idMessage\": \"2712345112345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/editMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"editMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 05:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-11-06T05:01:59.357Z\",\n    \"path\": \"/waInstance31000000001/editMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8\",\n    \"message\": \"Validation failed. Details: 'chatId' must be one of the next formats: 'phone_number@c.us', 'user_id' (digits only), or 'group_id' (starts with '-' followed by digits)\"\n}"
+						}
+					]
+				},
+				{
+					"name": "Удалить сообщение",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"idMessage\": \"2712345112345\",\r\n    \"onlySenderDelete\": false // удалить только у отправителя\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+							"host": [
+								"{{apiUrl}}"
+							],
+							"path": [
+								"waInstance{{idInstance}}",
+								"deleteMessage",
+								"{{apiTokenInstance}}"
+							]
+						},
+						"description": "Документация [DeleteMessage](https://green-api.com/v3/docs/api/service/DeleteMessage)"
+					},
+					"response": [
+						{
+							"name": "deleteMessage",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"idMessage\": \"2712345112345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "OK",
+							"code": 200,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 05:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": ""
+						},
+						{
+							"name": "deleteMessage (validation failed)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"\",\r\n    \"idMessage\": \"115500988697639805\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "17"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"11-Sw8ul3BwPx47lqN1Iq8kv5C62B8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 05:00:48 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [
+								{
+									"expires": "Invalid Date",
+									"domain": "",
+									"path": ""
+								}
+							],
+							"body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-11-06T05:01:59.357Z\",\n    \"path\": \"/waInstance31000000001/deleteMessage/94dfd8c20oeqrgnpweroi19ip4jke47d4b8\",\n    \"message\": \"Validation failed. Details: 'chatId' must be one of the next formats: 'phone_number@c.us', 'user_id' (digits only), or 'group_id' (starts with '-' followed by digits)\"\n}"
+						},
+						{
+							"name": "deleteMessage (deleting editedMessage)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"idMessage\": \"1155017624059\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "56"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"38-O2IFbr+eRY45G8HGlVVHidmv04w\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 06:12:10 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Deleting editedMessage type messages is not supported.\""
+						},
+						{
+							"name": "deleteMessage (message already was deleted)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"idMessage\": \"1155017624059\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "29"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"1d-cn/i2wRdwlTkkv9rALZ8lv2Iqn8\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 06:24:36 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Message already was deleted\""
+						},
+						{
+							"name": "deleteMessage (message by id not found)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"10000000\",\r\n    \"idMessage\": \"1155017624059\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "25"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"19-HB6NLbpCkBsgd0Pb3s9hZE2ipyM\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 06:27:24 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"Message by id not found\""
+						},
+						{
+							"name": "deleteMessage (ChatId not found)",
+							"originalRequest": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n\t\"chatId\": \"-10000002\",\r\n    \"idMessage\": \"2712345112345\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteMessage/{{apiTokenInstance}}",
+									"host": [
+										"{{apiUrl}}"
+									],
+									"path": [
+										"waInstance{{idInstance}}",
+										"deleteMessage",
+										"{{apiTokenInstance}}"
+									]
+								}
+							},
+							"status": "Bad Request",
+							"code": 400,
+							"_postman_previewlanguage": "json",
+							"header": [
+								{
+									"key": "Access-Control-Allow-Origin",
+									"value": "*"
+								},
+								{
+									"key": "Content-Security-Policy",
+									"value": "default-src 'self';base-uri 'self';block-all-mixed-content;font-src 'self' https: data:;frame-ancestors 'self';img-src 'self' data:;object-src 'none';script-src 'self';script-src-attr 'none';style-src 'self' https: 'unsafe-inline';upgrade-insecure-requests"
+								},
+								{
+									"key": "X-DNS-Prefetch-Control",
+									"value": "off"
+								},
+								{
+									"key": "Expect-CT",
+									"value": "max-age=0"
+								},
+								{
+									"key": "X-Frame-Options",
+									"value": "SAMEORIGIN"
+								},
+								{
+									"key": "Strict-Transport-Security",
+									"value": "max-age=15552000; includeSubDomains"
+								},
+								{
+									"key": "X-Download-Options",
+									"value": "noopen"
+								},
+								{
+									"key": "X-Content-Type-Options",
+									"value": "nosniff"
+								},
+								{
+									"key": "X-Permitted-Cross-Domain-Policies",
+									"value": "none"
+								},
+								{
+									"key": "Referrer-Policy",
+									"value": "no-referrer"
+								},
+								{
+									"key": "X-XSS-Protection",
+									"value": "0"
+								},
+								{
+									"key": "Access-Control-Allow-Methods",
+									"value": "GET,PUT,POST,DELETE"
+								},
+								{
+									"key": "Access-Control-Allow-Headers",
+									"value": "Content-Type, Accept"
+								},
+								{
+									"key": "Content-Type",
+									"value": "application/json",
+									"description": "",
+									"type": "text"
+								},
+								{
+									"key": "Content-Length",
+									"value": "18"
+								},
+								{
+									"key": "ETag",
+									"value": "W/\"12-2rxOYs/Pu63wKttt0A3uzES9X1o\""
+								},
+								{
+									"key": "Date",
+									"value": "Thu, 06 Nov 2025 06:32:39 GMT"
+								},
+								{
+									"key": "Connection",
+									"value": "keep-alive"
+								},
+								{
+									"key": "Keep-Alive",
+									"value": "timeout=5"
+								}
+							],
+							"cookie": [],
+							"body": "\"ChatId not found\""
+						}
+					]
+				},
+				{
 					"name": "Отправить уведомление набора",
 					"request": {
 						"method": "POST",
@@ -15507,6 +16891,108 @@
 							"response": []
 						},
 						{
+							"name": "Сообщение с геолокацией",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"locationMessageData\": {\r\n          \"latitude\": 51.1035035,\r\n          \"longitude\": 71.3996933,\r\n          \"forwardingScore\": 1,\r\n          \"isForwarded\": true\r\n      }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
+								"description": "Документация [Входящее сообщение с геолокацией](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/locationMessage)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+							},
+							"response": [
+								{
+									"name": "Сообщение с геолокацией в журнале",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"location\": {\r\n        \"latitude\": 51.103504,\r\n        \"longitude\": 71.3997,\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
+							"name": "Сообщение с контактом",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"contactMessageData\": {\r\n      \"chatId\": \"10000000\",\r\n      \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r\n      \"phoneNumber\": 79991112233,\r\n      \"displayName\": \"Ходабрыш Пробешёлов\",\r\n      \"vcard\": \"\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
+								"description": "Документация [Входящее сообщение с контактом](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/contactMessage)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+							},
+							"response": [
+								{
+									"name": "Сообщение с контактом в журнале",
+									"originalRequest": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"contact\": {\r\n        \"chatId\": \"10000000\",\r\n        \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r\n        \"phoneNumber\": 79991112233,\r\n        \"displayName\": \"Ходабрыш Пробешёлов\",\r\n        \"vcard\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": null,
+									"header": null,
+									"cookie": [],
+									"body": null
+								}
+							]
+						},
+						{
 							"name": "Сообщение-реакция",
 							"request": {
 								"method": "POST",
@@ -15536,7 +17022,109 @@
 										"header": [],
 										"body": {
 											"mode": "raw",
-											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"👍\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"115144403609924049\",\r\n        \"participant\": \"10000001\"\r\n    },\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n}",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"👍\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"115144403609924049\",\r\n        \"participant\": \"10000001\"\r\n    },\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Отредактированное сообщение",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1705895506,\r\n  \"idMessage\": \"115297976845823798\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"editedMessage\",\r\n    \"editedMessageData\": {\r\n        \"textMessage\": \"Отредактированное сообщение\",\r\n        \"stanzaId\": \"11529797684582123\"\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
+								"description": "Документация [Входящее отредактированное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/editedMessage)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+							},
+							"response": [
+								{
+									"name": "Отредактированное сообщение в журнале",
+									"originalRequest": {
+										"method": "VIEW",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"115297976845823798\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"textMessage\": \"Отредактированное сообщение\",\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"11529797684582123\",\r\n\t\"isEdited\": true,\r\n\t\"isDeleted\": false\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										}
+									},
+									"_postman_previewlanguage": "Text",
+									"header": [],
+									"cookie": [],
+									"body": ""
+								}
+							]
+						},
+						{
+							"name": "Удаленное сообщение",
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"typeWebhook\": \"incomingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1705895506,\r\n  \"idMessage\": \"115297976845823798\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"11529797684582123\"\r\n    }\r\n  }\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{webhookUrl}}",
+									"host": [
+										"{{webhookUrl}}"
+									]
+								},
+								"description": "Документация [Входящее удаленное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/incoming-message/deletedMessage/)\n\nДля получения данного типа уведомления необходимо включить настройку \"incomingWebhook\": \"yes\" в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/)"
+							},
+							"response": [
+								{
+									"name": "Удаленное сообщение в журнале",
+									"originalRequest": {
+										"method": "VIEW",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n    \"type\": \"incoming\",\r\n    \"idMessage\": \"115297976845823798\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"textMessage\": \"Сообщение\",\r\n    \"deletedMessageId\": \"11529797684582123\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": true\r\n}",
 											"options": {
 												"raw": {
 													"language": "json"
@@ -15823,6 +17411,114 @@
 									"response": []
 								},
 								{
+									"name": "Сообщение с геолокацией",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"locationMessageData\": {\r\n          \"latitude\": 51.1035035,\r\n          \"longitude\": 71.3996933,\r\n          \"forwardingScore\": 1,\r\n          \"isForwarded\": true\r\n      }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее сообщение с геолокацией](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/locationMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Сообщение с геолокацией в журнале",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"location\": {\r\n        \"latitude\": 51.103504,\r\n        \"longitude\": 71.3997,\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "",
+											"header": [],
+											"cookie": [
+												{
+													"expires": "Invalid Date",
+													"domain": "",
+													"path": ""
+												}
+											],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Сообщение с контактом",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"contactMessageData\": {\r\n      \"chatId\": \"10000000\",\r\n      \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r\n      \"phoneNumber\": 79991112233,\r\n      \"displayName\": \"Ходабрыш Пробешёлов\",\r\n      \"vcard\": \"\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее сообщение с контактом](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/contactMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Сообщение с контактом в журнале",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"contact\": {\r\n        \"chatId\": \"10000000\",\r\n        \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r\n        \"phoneNumber\": 79991112233,\r\n        \"displayName\": \"Ходабрыш Пробешёлов\",\r\n        \"vcard\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
 									"name": "Сообщение-реакция",
 									"request": {
 										"method": "POST",
@@ -15852,7 +17548,109 @@
 												"header": [],
 												"body": {
 													"mode": "raw",
-													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"👍\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"115144403609924049\",\r\n        \"participant\": \"10000001\"\r\n    },\r\n    \"senderId\": \"10000000\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\"\r\n}",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"reactionMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"extendedTextMessageData\": {\r\n        \"text\": \"👍\"\r\n    },\r\n    \"quotedMessage\": {\r\n        \"stanzaId\": \"115144403609924049\",\r\n        \"participant\": \"10000001\"\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Отредактированное сообщение",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1705895506,\r\n  \"idMessage\": \"115297976845823798\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"editedMessage\",\r\n    \"editedMessageData\": {\r\n        \"textMessage\": \"Отредактированное сообщение\",\r\n        \"stanzaId\": \"11529797684582123\"\r\n    }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее отредактированное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/editedMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Отредактированное сообщение в журнале",
+											"originalRequest": {
+												"method": "VIEW",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"115297976845823798\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"textMessage\": \"Отредактированное сообщение\",\r\n    \"statusMessage\": \"delivired\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"11529797684582123\",\r\n\t\"isEdited\": true,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Удаленное сообщение",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1705895506,\r\n  \"idMessage\": \"115297976845823798\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"11529797684582123\"\r\n    }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее удаленное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/deletedMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Удаленное сообщение в журнале",
+											"originalRequest": {
+												"method": "VIEW",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"115297976845823798\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"textMessage\": \"Сообщение\",\r\n    \"statusMessage\": \"delivired\",\r\n    \"sendByApi\": false,\r\n    \"deletedMessageId\": \"11529797684582123\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": true\r\n}",
 													"options": {
 														"raw": {
 															"language": "json"
@@ -16134,6 +17932,216 @@
 										"description": "Документация [Отправленное сообщение через API](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/OutgoingApiMessage/)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/):  \n\"outgoingAPIMessageWebhook\": \"yes\""
 									},
 									"response": []
+								},
+								{
+									"name": "Сообщение с геолокацией",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"locationMessageData\": {\r\n          \"latitude\": 51.1035035,\r\n          \"longitude\": 71.3996933,\r\n          \"forwardingScore\": 1,\r\n          \"isForwarded\": true\r\n      }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее сообщение с геолокацией](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/locationMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingAPIMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Сообщение с геолокацией в журнале",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"locationMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"location\": {\r\n        \"latitude\": 51.103504,\r\n        \"longitude\": 71.3997,\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": true,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "",
+											"header": [],
+											"cookie": [
+												{
+													"expires": "Invalid Date",
+													"domain": "",
+													"path": ""
+												}
+											],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Сообщение с контактом",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1588091580,\r\n  \"idMessage\": \"2755232962562\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"contactMessageData\": {\r\n      \"chatId\": \"10000000\",\r\n      \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r\n      \"phoneNumber\": 79991112233,\r\n      \"displayName\": \"Ходабрыш Пробешёлов\",\r\n      \"vcard\": \"\",\r\n      \"forwardingScore\": 0,\r\n      \"isForwarded\": false\r\n    }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее сообщение с контактом](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/contactMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingAPIMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Сообщение с контактом в журнале",
+											"originalRequest": {
+												"method": "POST",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"2755232962562\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"contactMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"contact\": {\r\n        \"chatId\": \"10000000\",\r\n        \"urlAvatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\r\n        \"phoneNumber\": 79991112233,\r\n        \"displayName\": \"Ходабрыш Пробешёлов\",\r\n        \"vcard\": \"\",\r\n        \"forwardingScore\": 0,\r\n        \"isForwarded\": false\r\n    },\r\n    \"statusMessage\": \"read\",\r\n    \"sendByApi\": true,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": null,
+											"header": null,
+											"cookie": [],
+											"body": null
+										}
+									]
+								},
+								{
+									"name": "Отредактированное сообщение",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1705895506,\r\n  \"idMessage\": \"115297976845823798\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"editedMessage\",\r\n    \"editedMessageData\": {\r\n        \"textMessage\": \"Отредактированное сообщение\",\r\n        \"stanzaId\": \"11529797684582123\"\r\n    }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее отредактированное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/editedMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingAPIMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Отредактированное сообщение в журнале",
+											"originalRequest": {
+												"method": "VIEW",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"115297976845823798\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"textMessage\": \"Отредактированное сообщение\",\r\n    \"statusMessage\": \"delivired\",\r\n    \"sendByApi\": true,\r\n    \"deletedMessageId\": \"\",\r\n\t\"editedMessageId\": \"11529797684582123\",\r\n\t\"isEdited\": true,\r\n\t\"isDeleted\": false\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
+								},
+								{
+									"name": "Удаленное сообщение",
+									"request": {
+										"method": "POST",
+										"header": [],
+										"body": {
+											"mode": "raw",
+											"raw": "{\r\n  \"typeWebhook\": \"outgoingAPIMessageReceived\",\r\n  \"instanceData\": {\r\n    \"idInstance\": 3100000000,\r\n    \"wid\": \"79991234567@c.us\",\r\n    \"typeInstance\": \"v3\"\r\n  },\r\n  \"timestamp\": 1705895506,\r\n  \"idMessage\": \"115297976845823798\",\r\n  \"senderData\": {\r\n    \"chatId\": \"10000000\",\r\n    \"sender\": \"10000000\",\r\n    \"chatName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderContactName\": \"Ходабрыш Пробешёлов\",\r\n    \"senderPhoneNumber\": 79991112233\r\n  },\r\n  \"messageData\": {\r\n    \"typeMessage\": \"deletedMessage\",\r\n    \"deletedMessageData\": {\r\n        \"stanzaId\": \"11529797684582123\"\r\n    }\r\n  }\r\n}",
+											"options": {
+												"raw": {
+													"language": "json"
+												}
+											}
+										},
+										"url": {
+											"raw": "{{webhookUrl}}",
+											"host": [
+												"{{webhookUrl}}"
+											]
+										},
+										"description": "Документация [Исходящее удаленное сообщение](https://green-api.com/v3/docs/api/receiving/notifications-format/outgoing-message/deletedMessage)\n\nДля получения данного типа уведомления необходимо включить настройки в личном кабинете или методом [SetSettings](https://green-api.com/v3/docs/api/account/SetSettings/): \"outgoingAPIMessageWebhook\": \"yes\""
+									},
+									"response": [
+										{
+											"name": "Удаленное сообщение в журнале",
+											"originalRequest": {
+												"method": "VIEW",
+												"header": [],
+												"body": {
+													"mode": "raw",
+													"raw": "{\r\n    \"type\": \"outgoing\",\r\n    \"idMessage\": \"115297976845823798\",\r\n    \"timestamp\": 1705895506,\r\n    \"typeMessage\": \"textMessage\",\r\n    \"chatId\": \"10000000\",\r\n    \"textMessage\": \"Сообщение\",\r\n    \"statusMessage\": \"delivired\",\r\n    \"sendByApi\": true,\r\n    \"deletedMessageId\": \"11529797684582123\",\r\n\t\"editedMessageId\": \"\",\r\n\t\"isEdited\": false,\r\n\t\"isDeleted\": true\r\n}",
+													"options": {
+														"raw": {
+															"language": "json"
+														}
+													}
+												},
+												"url": {
+													"raw": "{{webhookUrl}}",
+													"host": [
+														"{{webhookUrl}}"
+													]
+												}
+											},
+											"_postman_previewlanguage": "Text",
+											"header": [],
+											"cookie": [],
+											"body": ""
+										}
+									]
 								}
 							]
 						}
