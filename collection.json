@@ -1,6 +1,6 @@
 {
 	"info": {
-		"_postman_id": "d2f084e6-71d1-45b9-8164-6cc6d33dd6b8",
+		"_postman_id": "ce5a2e4c-1879-4a99-8b71-60d3c2e6390c",
 		"name": "Green API RU Max (v3)",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
 		"_exporter_id": "37785427"
@@ -3588,7 +3588,7 @@
 							},
 							"status": "Bad Request",
 							"code": 400,
-							"_postman_previewlanguage": null,
+							"_postman_previewlanguage": "Text",
 							"header": [
 								{
 									"key": "Access-Control-Allow-Origin",
@@ -14920,7 +14920,7 @@
 									"path": ""
 								}
 							],
-							"body": "{\n    \"isEdited\": true\n}"
+							"body": "{\n    \"idMessage\": \"2712345112345\"\n}"
 						},
 						{
 							"name": "editMessage (validation failed)",
@@ -16934,10 +16934,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
@@ -16985,10 +16985,10 @@
 											]
 										}
 									},
-									"_postman_previewlanguage": null,
-									"header": null,
+									"_postman_previewlanguage": "Text",
+									"header": [],
 									"cookie": [],
-									"body": null
+									"body": ""
 								}
 							]
 						},
@@ -17454,7 +17454,7 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": "",
+											"_postman_previewlanguage": "Text",
 											"header": [],
 											"cookie": [
 												{
@@ -17511,10 +17511,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
@@ -17977,7 +17977,7 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": "",
+											"_postman_previewlanguage": "Text",
 											"header": [],
 											"cookie": [
 												{
@@ -18034,10 +18034,10 @@
 													]
 												}
 											},
-											"_postman_previewlanguage": null,
-											"header": null,
+											"_postman_previewlanguage": "Text",
+											"header": [],
 											"cookie": [],
-											"body": null
+											"body": ""
 										}
 									]
 								},
