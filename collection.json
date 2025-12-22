@@ -334,7 +334,7 @@
 								"{{apiTokenInstance}}"
 							]
 						},
-						"description": "Документация [QR](https://green-api.com/docs/api/account/QR/)"
+						"description": "Документация [QR](https://green-api.com/v3/docs/api/account/QR/)"
 					},
 					"response": [
 						{
