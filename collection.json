@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "05d5eebe-af54-4da1-afcc-94909aef7e55",
+    "_postman_id": "e41359c0-53e8-4da4-bfcb-0b1a182c50dc",
     "name": "Green API RU Max (v3)",
     "description": "## 👋 Введение\n\nДобро пожаловать в рабочую область [GREEN-API](https://green-api.com/). Эта рабочая область содержит коллекцию Postman, с помощью которой вы можете быстро протестировать [GREEN-API](https://green-api.com/).\n\nОтправляйте и получайте сообщения, картинки и видео через стабильный шлюз **MAX**.\n\n**Бесплатный инструмент для разработчиков**\n\nЗелёный свет Вашим Идеям!\n\nПодробнее на [веб-сайте](https://green-api.com/en)\n\n## 🚀 Начало работы с этим рабочим пространством\n\nВ этом рабочем пространстве вы найдете коллекцию Postman, которая поможет вам быстро и легко отправлять и получать сообщения из MAX.\n\n[Прежде чем начать работу с](https://www.youtube.com/watch?v=5a3vLrftBak&ab_channel=Green-API) Green API, необходимо выполнить следующие шаги:\n\n1. [Установить мобильное приложение MAX](https://green-api.com/v3/docs/before-start/#mobile)\n    \n2. [Регистрация в Личном кабинете](https://green-api.com/v3/docs/before-start/#cabinet)\n    \n3. [Создание и авторизация инстанса](https://green-api.com/v3/docs/before-start/#instance)\n    \n4. [Получить параметры доступа к инстансу](https://green-api.com/v3/docs/before-start/#parameters)\n    \n5. [Настроить получение входящих данных](https://green-api.com/v3/docs/before-start/#receiving)\n    \n6. [Важные отличия версии v3](https://green-api.com/v3/docs/before-start/#receiving)\n    \n\n## **⭐️** Рекомендации\n\nВот несколько рекомендаций, которым следует следовать при работе с API:\n\n- Используйте переменные окружения, указав в них **idInstance** и **ApiTokenInstance**, чтобы быстро менять инстансы.\n    \n- Перед написанием кода проверьте работу GREEN-API с помощью коллекции.\n    \n- Используйте сгенерированный код из Postman при разработке интеграции.\n    \n\n## 🛟 Помощь и поддержка\n\nЕсли у вас есть вопросы или предложения, пожалуйста, не стесняйтесь обращаться в нашу службу поддержки.\n\nСайт: [https://green-api.com](https://green-api.com/)  \nПочта: [support@green-api.com](https://mailto:support@green-api.com)  \nTelegram: [https://t.me/greenapi_support_ru_bot](https://t.me/greenapi_support_ru_bot)  \nWhatsApp: [https://wa.me/79993331223](https://wa.me/79993331223)  \nYouTube: [https://www.youtube.com/@green-api](https://www.youtube.com/@green-api)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "31501023",
-    "_collection_link": "https://go.postman.co/collection/37785427-05d5eebe-af54-4da1-afcc-94909aef7e55?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/31501023-e41359c0-53e8-4da4-bfcb-0b1a182c50dc?source=collection_link"
   },
   "item": [
     {
@@ -700,7 +700,9 @@
                       "key": "file",
                       "description": "Sent file in *.jpg",
                       "type": "file",
-                      "src": "/C:/avatar.jpg"
+                      "src": [
+                        "/C:/avatar.jpg"
+                      ]
                     }
                   ],
                   "options": {
@@ -761,7 +763,7 @@
                       "key": "file",
                       "description": "Sent file in *.jpg",
                       "type": "file",
-                      "value": null
+                      "src": []
                     }
                   ],
                   "options": {
@@ -822,7 +824,9 @@
                       "key": "file",
                       "description": "Sent file in *.jpg",
                       "type": "file",
-                      "src": "/C:/horse.wav"
+                      "src": [
+                        "/C:/horse.wav"
+                      ]
                     }
                   ],
                   "options": {
@@ -1145,6 +1149,270 @@
               ],
               "cookie": [],
               "body": "{\n    \"avatar\": \"https://i.oneme.ru/i?r=BTE2sh_eZW7g8kugOdIm2NotBPGJiDHPpKQP3fE_vh2BE1holGE_adbUwUqCIPQgiOI\",\n    \"phone\": 79991234567,\n    \"stateInstance\": \"suspended\",\n    \"chatId\": \"1000000\",\n    \"historySyncProgress\": 100,\n    \"suspendedUntil\": 1756442317465\n}"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Облачный пароль",
+      "item": [
+        {
+          "name": "Получить настройки облачного пароля",
+          "request": {
+            "method": "GET",
+            "header": [],
+            "url": {
+              "raw": "{{apiUrl}}/waInstance{{idInstance}}/getAuthorizationPasswordStatus/{{apiTokenInstance}}",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "waInstance{{idInstance}}",
+                "getAuthorizationPasswordStatus",
+                "{{apiTokenInstance}}"
+              ]
+            },
+            "description": "Документация [GetAuthorizationPasswordStatus](https://green-api.com/v3/docs/api/password/GetAuthorizationPasswordStatus/)"
+          },
+          "response": [
+            {
+              "name": "getAuthorizationPasswordStatus",
+              "originalRequest": {
+                "method": "VIEW",
+                "header": [],
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/getAuthorizationPasswordStatus/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "getAuthorizationPasswordStatus",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"status\": \"success\",\n        \"enabled\": false,\n        \"hint\": \"\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Установить облачный пароль",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n  \"password\": \"qwerty123\",\r\n  \"hint\": \"Как обычно\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/waInstance{{idInstance}}/setAuthorizationPassword/{{apiTokenInstance}}",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "waInstance{{idInstance}}",
+                "setAuthorizationPassword",
+                "{{apiTokenInstance}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "setAuthorizationPassword",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n  \"password\": \"qwerty123\",\r\n  \"hint\": \"Как обычно\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/setAuthorizationPassword/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "setAuthorizationPassword",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"status\": \"success\",\n        \"reason\": \"\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Изменить облачный пароль",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"oldPassword\": \"qwerty123\",\r\n    \"newPassword\": \"qwerty456\",\r\n    \"hint\": \"Новая подсказка\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/waInstance{{idInstance}}/editAuthorizationPassword/{{apiTokenInstance}}",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "waInstance{{idInstance}}",
+                "editAuthorizationPassword",
+                "{{apiTokenInstance}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "editAuthorizationPassword",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"oldPassword\": \"qwerty123\",\r\n    \"newPassword\": \"qwerty456\",\r\n    \"hint\": \"Новая подсказка\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/editAuthorizationPassword/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "editAuthorizationPassword",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"status\": \"success\",\n        \"reason\": \"\"\n    }\n}"
+            }
+          ]
+        },
+        {
+          "name": "Удалить облачный пароль",
+          "request": {
+            "method": "POST",
+            "header": [],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"password\": \"qwerty123\"\r\n}",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteAuthorizationPassword/{{apiTokenInstance}}",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "waInstance{{idInstance}}",
+                "deleteAuthorizationPassword",
+                "{{apiTokenInstance}}"
+              ]
+            }
+          },
+          "response": [
+            {
+              "name": "deleteAuthorizationPassword",
+              "originalRequest": {
+                "method": "POST",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"password\": \"qwerty123\"\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/deleteAuthorizationPassword/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "deleteAuthorizationPassword",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Content-Type",
+                  "value": "application/json",
+                  "description": "",
+                  "type": "text"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"status\": true,\n    \"data\": {\n        \"status\": \"success\",\n        \"reason\": \"\"\n    }\n}"
             }
           ]
         }
@@ -2485,7 +2753,9 @@
                       "key": "file",
                       "description": "Отправляемый файл",
                       "type": "file",
-                      "src": "/C:/horse.png"
+                      "src": [
+                        "/C:/horse.png"
+                      ]
                     },
                     {
                       "key": "fileName",
@@ -2594,7 +2864,9 @@
                       "key": "file",
                       "description": "Отправляемый файл",
                       "type": "file",
-                      "src": "/C:/horse.png"
+                      "src": [
+                        "/C:/horse.png"
+                      ]
                     },
                     {
                       "key": "fileName",
@@ -2693,7 +2965,7 @@
                       "key": "file",
                       "description": "Отправляемый файл",
                       "type": "file",
-                      "value": null
+                      "src": []
                     },
                     {
                       "key": "fileName",
