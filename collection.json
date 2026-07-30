@@ -1,11 +1,11 @@
 {
   "info": {
-    "_postman_id": "e41359c0-53e8-4da4-bfcb-0b1a182c50dc",
+    "_postman_id": "05d5eebe-af54-4da1-afcc-94909aef7e55",
     "name": "Green API RU Max (v3)",
     "description": "## 👋 Введение\n\nДобро пожаловать в рабочую область [GREEN-API](https://green-api.com/). Эта рабочая область содержит коллекцию Postman, с помощью которой вы можете быстро протестировать [GREEN-API](https://green-api.com/).\n\nОтправляйте и получайте сообщения, картинки и видео через стабильный шлюз **MAX**.\n\n**Бесплатный инструмент для разработчиков**\n\nЗелёный свет Вашим Идеям!\n\nПодробнее на [веб-сайте](https://green-api.com/en)\n\n## 🚀 Начало работы с этим рабочим пространством\n\nВ этом рабочем пространстве вы найдете коллекцию Postman, которая поможет вам быстро и легко отправлять и получать сообщения из MAX.\n\n[Прежде чем начать работу с](https://www.youtube.com/watch?v=5a3vLrftBak&ab_channel=Green-API) Green API, необходимо выполнить следующие шаги:\n\n1. [Установить мобильное приложение MAX](https://green-api.com/v3/docs/before-start/#mobile)\n    \n2. [Регистрация в Личном кабинете](https://green-api.com/v3/docs/before-start/#cabinet)\n    \n3. [Создание и авторизация инстанса](https://green-api.com/v3/docs/before-start/#instance)\n    \n4. [Получить параметры доступа к инстансу](https://green-api.com/v3/docs/before-start/#parameters)\n    \n5. [Настроить получение входящих данных](https://green-api.com/v3/docs/before-start/#receiving)\n    \n6. [Важные отличия версии v3](https://green-api.com/v3/docs/before-start/#receiving)\n    \n\n## **⭐️** Рекомендации\n\nВот несколько рекомендаций, которым следует следовать при работе с API:\n\n- Используйте переменные окружения, указав в них **idInstance** и **ApiTokenInstance**, чтобы быстро менять инстансы.\n    \n- Перед написанием кода проверьте работу GREEN-API с помощью коллекции.\n    \n- Используйте сгенерированный код из Postman при разработке интеграции.\n    \n\n## 🛟 Помощь и поддержка\n\nЕсли у вас есть вопросы или предложения, пожалуйста, не стесняйтесь обращаться в нашу службу поддержки.\n\nСайт: [https://green-api.com](https://green-api.com/)  \nПочта: [support@green-api.com](https://mailto:support@green-api.com)  \nTelegram: [https://t.me/greenapi_support_ru_bot](https://t.me/greenapi_support_ru_bot)  \nWhatsApp: [https://wa.me/79993331223](https://wa.me/79993331223)  \nYouTube: [https://www.youtube.com/@green-api](https://www.youtube.com/@green-api)",
     "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
     "_exporter_id": "31501023",
-    "_collection_link": "https://go.postman.co/collection/31501023-e41359c0-53e8-4da4-bfcb-0b1a182c50dc?source=collection_link"
+    "_collection_link": "https://go.postman.co/collection/37785427-05d5eebe-af54-4da1-afcc-94909aef7e55?source=collection_link"
   },
   "item": [
     {
@@ -700,9 +700,7 @@
                       "key": "file",
                       "description": "Sent file in *.jpg",
                       "type": "file",
-                      "src": [
-                        "/C:/avatar.jpg"
-                      ]
+                      "src": "/C:/avatar.jpg"
                     }
                   ],
                   "options": {
@@ -763,7 +761,7 @@
                       "key": "file",
                       "description": "Sent file in *.jpg",
                       "type": "file",
-                      "src": []
+                      "value": null
                     }
                   ],
                   "options": {
@@ -824,9 +822,7 @@
                       "key": "file",
                       "description": "Sent file in *.jpg",
                       "type": "file",
-                      "src": [
-                        "/C:/horse.wav"
-                      ]
+                      "src": "/C:/horse.wav"
                     }
                   ],
                   "options": {
@@ -2965,7 +2961,7 @@
                       "key": "file",
                       "description": "Отправляемый файл",
                       "type": "file",
-                      "src": []
+                      "value": null
                     },
                     {
                       "key": "fileName",
@@ -4001,6 +3997,204 @@
               ],
               "cookie": [],
               "body": "\"Contact 20000001 not found\""
+            }
+          ]
+        },
+        {
+          "name": "Отправить опрос",
+          "request": {
+            "method": "POST",
+            "header": [
+              {
+                "key": "User-Agent",
+                "value": "GREEN-API_POSTMAN/1.0",
+                "type": "text"
+              }
+            ],
+            "body": {
+              "mode": "raw",
+              "raw": "{\r\n    \"chatId\": \"10000000\",\r\n    \"message\": \"Какой мессенджер вы используете чаще всего?\",\r\n    \"options\": [\r\n        {\"optionName\": \"MAX\"},\r\n        {\"optionName\": \"Telegram\"},\r\n        {\"optionName\": \"WhatsApp\"}\r\n    ],\r\n    \"allowToChangeAnswer\": false\r\n}\r\n",
+              "options": {
+                "raw": {
+                  "language": "json"
+                }
+              }
+            },
+            "url": {
+              "raw": "{{apiUrl}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+              "host": [
+                "{{apiUrl}}"
+              ],
+              "path": [
+                "waInstance{{idInstance}}",
+                "sendPoll",
+                "{{apiTokenInstance}}"
+              ]
+            },
+            "description": "Документация [SendPoll](https://green-api.com/v3/docs/api/sending/SendPoll/)"
+          },
+          "response": [
+            {
+              "name": "sendPoll",
+              "originalRequest": {
+                "method": "VIEW",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n    \"chatId\": \"10000000\",\r\n    \"message\": \"Какой мессенджер вы используете чаще всего?\",\r\n    \"options\": [\r\n        {\"optionName\": \"MAX\"},\r\n        {\"optionName\": \"Telegram\"},\r\n        {\"optionName\": \"WhatsApp\"}\r\n    ],\r\n    \"allowToChangeAnswer\": false\r\n}\r\n",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "sendPoll",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "OK",
+              "code": 200,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Apr 2020 13:14:58 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "41"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"idMessage\": \"2712345112345\"\n}"
+            },
+            {
+              "name": "sendPoll (empty chatId)",
+              "originalRequest": {
+                "method": "VIEW",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"chatId\": \"\",\r\n\t\"message\": \"Какой мессенджер вы используете чаще всего?\",\r\n    \"options\": [\r\n        {\"optionName\": \"MAX\"},\r\n        {\"optionName\": \"Telegram\"},\r\n        {\"optionName\": \"WhatsApp\"}\r\n    ],\r\n    \"allowToChangeAnswer\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "sendPoll",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Apr 2020 13:14:58 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "41"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-08-15T07:04:56.987Z\",\n    \"path\": \"/waInstance31000000001/sendPoll/94dfd8c20oeqrgnpweroi19ip4jke47d4b8\",\n    \"message\": \"Validation failed. Details: 'chatId' is not allowed to be empty\"\n}"
+            },
+            {
+              "name": "sendPoll (empty message)",
+              "originalRequest": {
+                "method": "VIEW",
+                "header": [],
+                "body": {
+                  "mode": "raw",
+                  "raw": "{\r\n\t\"chatId\": \"10000000\",\r\n\t\"message\": \"\",\r\n    \"options\": [\r\n        {\"optionName\": \"MAX\"},\r\n        {\"optionName\": \"Telegram\"},\r\n        {\"optionName\": \"WhatsApp\"}\r\n    ],\r\n    \"allowToChangeAnswer\": false\r\n}",
+                  "options": {
+                    "raw": {
+                      "language": "json"
+                    }
+                  }
+                },
+                "url": {
+                  "raw": "{{apiUrl}}/waInstance{{idInstance}}/sendPoll/{{apiTokenInstance}}",
+                  "host": [
+                    "{{apiUrl}}"
+                  ],
+                  "path": [
+                    "waInstance{{idInstance}}",
+                    "sendPoll",
+                    "{{apiTokenInstance}}"
+                  ]
+                }
+              },
+              "status": "Bad Request",
+              "code": 400,
+              "_postman_previewlanguage": "json",
+              "header": [
+                {
+                  "key": "Server",
+                  "value": "nginx"
+                },
+                {
+                  "key": "Date",
+                  "value": "Fri, 17 Apr 2020 13:14:58 GMT"
+                },
+                {
+                  "key": "Content-Type",
+                  "value": "application/json"
+                },
+                {
+                  "key": "Content-Length",
+                  "value": "41"
+                },
+                {
+                  "key": "Connection",
+                  "value": "keep-alive"
+                }
+              ],
+              "cookie": [],
+              "body": "{\n    \"statusCode\": 400,\n    \"timestamp\": \"2025-08-15T07:04:56.987Z\",\n    \"path\": \"/waInstance31000000001/sendPoll/94dfd8c20oeqrgnpweroi19ip4jke47d4b8\",\n    \"message\": \"Validation failed. Details: 'message' is not allowed to be empty\"\n}"
             }
           ]
         }
@@ -11556,9 +11750,7 @@
                     {
                       "key": "file",
                       "type": "file",
-                      "src": [
-                        "/C:/horse.wav"
-                      ]
+                      "src": "/C:/horse.wav"
                     }
                   ],
                   "options": {
